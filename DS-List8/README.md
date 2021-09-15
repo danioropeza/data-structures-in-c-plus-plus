@@ -4,7 +4,7 @@ A linked list is a linear data structure. It consists of a sequence of nodes whe
 
 #TODO mentions Queue and Stack
 ### Some variants of Linked Lists
-<img src="../images/linked_lists_variants.jpg" />
+<img src="../images/linked_lists_variants.jpg" width="75%" />
 
 Advantages
 
