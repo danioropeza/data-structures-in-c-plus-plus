@@ -5,9 +5,9 @@ A linked list is a linear data structure. It consists of a sequence of nodes whe
 TODO mentions Queue and Stack
 
 ## Some variants
-<img src="images/singly_linked_list" height="100">
-<img src="images/doubly_linked_list" height="100">
-<img src="images/doubly_circular_linked_list" height="100">
+<img src="../images/singly_linked_list" height="100">
+<img src="../images/doubly_linked_list" height="100">
+<img src="../images/doubly_circular_linked_list" height="100">
 
 
 Advantages
