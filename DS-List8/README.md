@@ -26,4 +26,15 @@ Linked lists only allow sequential access to elements while arrays allow random 
 | Nth          | O(n)            |
 
 ## Real life examples
+A Linked List is good for:
+* Doubly Circular linked list: Build a music playlist where you don't have a specific order. You only want to play the following songs and the previous ones and if it reaches the end, play again from the beginning. 
+* Doubly Circular linked list: This solves the problem of Flavio Josefo. This problem consists of a group of people arranged in a circle. It starts from a predetermined person and is counted n times, the nth person is removed from the circle and the group is closed again. This process is repeated until only one person remains, who is the one who wins.
+* Singly Circular Linked List: The "take a number" lines where the number of the tickets is increased to a certain point and then starts again at "1".
+* Doubly Circular linked list: Implement a graphic carousel at the beginning of a web page where images are rotated every so often. But that at any time you can see the previous or next image.
+* Doubly Linked List: You want to save the undo / redo operations in an application.
 
+## Code explanation
+
+## TODO
+- Metion Stack and queues
+- Mention Hash table.
