@@ -4,7 +4,7 @@ Hash Table is a data structure which stores data in an associative manner. In a 
 
 Ideally the hash code should be unique and unrepeatable for each input. But this will depend on how effective the hash function is. Therefore, every time 2 different inputs return the same hash code, a collision will be generated. A hash table must withstand collisions, and one of its solutions is to implement a linked list at each position in the array.
 
-<img src="../images/high_level_view_of_hash_table.jpg" width="75%" />
+<img src="../images/high_level_view_hash_table.jpg" width="75%" />
 
 ## Advantages
 
