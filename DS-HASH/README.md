@@ -6,6 +6,9 @@ Ideally the hash code should be unique and unrepeatable for each input. But this
 
 <img src="../images/high_level_view_hash_table.jpg" width="75%" />
 
+### Size of a Hash Table
+If the size of the Table is too high, the operations will be very efficient, but we will waste too much space. If, on the other hand, it is too low, the collisions will be triggered and the structure will have a performance very similar to a list. Ideally each item in the set will be stored in one position in the array. The size of the Hash Table must be a number greater than the expected size of the unique entries. To avoid collisions it should preferably be prime number and not very close to a power of 2.
+
 ## Advantages
 The main advantage of hash tables over other table data structures is speed. Thanks to the hash code we can have direct access to the elements and perform search, insert, and delete actions in constant time. This advantage is more apparent when the number of entries is large. Hash tables are particularly efficient when the maximum number of entries can be predicted, so that the array can be allocated once with the optimum size and never resized again.
 
