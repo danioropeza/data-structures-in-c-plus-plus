@@ -23,12 +23,9 @@ Sorting the elements of a hash table is somewhat complicated by the way it is im
 ## Hash Table operations and Time Complexity
 | Operation    | Time Complexity |
 | ------------ | --------------- |
-| AddFront     | O(1)            |
-| DeleteFront  | O(1)            |
-| AddBack      | O(1)            |
-| DeleteBack   | O(1)            |
-| Search       | O(n)            |
-| Nth          | O(n)            |
+| Insert       | O(1)            |
+| Delete       | O(1)            |
+| Search       | O(1)            |
 
 ## Real life examples
 A Hash Table is good for:
