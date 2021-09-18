@@ -7,8 +7,15 @@ Ideally the hash code should be unique and unrepeatable for each input. But this
 <img src="../images/high_level_view_hash_table.jpg" width="75%" />
 
 ## Advantages
+The main advantage of hash tables over other table data structures is speed. Thanks to the hash code we can have direct access to the elements and perform search, insert, and delete actions in constant time. This advantage is more apparent when the number of entries is large. Hash tables are particularly efficient when the maximum number of entries can be predicted, so that the array can be allocated once with the optimum size and never resized again.
 
 ## Disadvantages
+Hash tables are not effective when the number of entries is very small because the cost of computing the indices may be higher than going through another structure. On the contrary, if the number of entries is not predictable, we could reserve a very small or very large size for the array. Possibly in the future, we will have to resize the size of the hash.
+
+Another of its disadvantages are collisions, if the hash function is not good enough, there will be many collisions and the hash table will have a performance similar to a list.
+
+Sorting the elements of a hash table is somewhat complicated by the way it is implemented.
+
 
 ## Hash Table operations and Time Complexity
 | Operation    | Time Complexity |
