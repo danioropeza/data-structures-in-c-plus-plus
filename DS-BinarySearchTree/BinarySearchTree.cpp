@@ -27,6 +27,55 @@ void BinarySearchTree<T>::InsertImpl(Node<T>*& root_iterator, T element) {
 	}
 }
 template<typename T>
+bool BinarySearchTree<T>::Delete(T element) {
+	return DeleteImpl(root_, element);
+}
+template<typename T>
+bool BinarySearchTree<T>::DeleteImpl(Node<T>*& root_iterator, T element) {
+	bool result;
+	if (root_iterator == NULL) {
+		return false;
+	} else {
+		if (element < root_iterator->element()) {
+			result = DeleteImpl(root_iterator->left(), element);
+		}
+		if (element > root_iterator->element()) {
+			result = DeleteImpl(root_iterator->right(), element);
+		}
+		if (element == root_iterator->element()) {
+			result = true;
+			if (root_iterator->left() == NULL && root_iterator->right() == NULL) {
+				root_iterator = NULL;
+				delete root_iterator;
+			} else {
+				if (root_iterator->left() != NULL && root_iterator->right() != NULL) {
+					int random_number = rand() % 2;
+					if (random_number) {
+						Node<T>* minor = FindMinorImpl(root_iterator->right());
+						root_iterator->set_element(minor->element());
+						result = DeleteImpl(root_iterator->right(), minor->element());
+					} else {
+						Node<T>* mayor = FindMayorImpl(root_iterator->left());
+						root_iterator->set_element(mayor->element());
+						result = DeleteImpl(root_iterator->left(), mayor->element());
+					}
+				} else {
+					if (root_iterator->left() == NULL && root_iterator->right() != NULL) {
+						Node<T>* mayor = FindMayorImpl(root_iterator->right());
+						root_iterator->set_element(mayor->element());
+						result = DeleteImpl(root_iterator->right(), mayor->element());
+					} else {
+						Node<T>* minor = FindMinorImpl(root_iterator->left());
+						root_iterator->set_element(minor->element());
+						result = DeleteImpl(root_iterator->left(), minor->element());
+					}
+				}
+			}
+		}
+	}
+	return  result;
+}
+template<typename T>
 Node<T>*& BinarySearchTree<T>::Search(T element) {
 	return SearchImpl(root_, element);
 }
@@ -188,3 +237,26 @@ void BinarySearchTree<T>::ShowPostOrderImpl(Node<T>* root_iterator) {
 		cout << root_iterator->element() << endl;
 	}
 }
+template<typename T>
+void BinarySearchTree<T>::Show2D() {
+	Show2DImpl(root_);
+}
+template<typename T>
+void BinarySearchTree<T>::Show2DImpl(Node<T>* root_iterator) {
+	Show2DUtil(root_iterator, 0);
+}
+template<typename T>
+void BinarySearchTree<T>::Show2DUtil(Node<T>* root_iterator, int space) {
+	if (root_iterator == NULL) {
+		return;
+	}
+	space += SPACES;
+	Show2DUtil(root_iterator->right(), space);
+	cout << endl;
+	for (int i = SPACES; i < space; i++) {
+		cout << " ";
+	}
+	cout << root_iterator->element() << "\n";
+	Show2DUtil(root_iterator->left(), space);
+}
+
