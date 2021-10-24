@@ -3,4 +3,5 @@ This repository pretends to explain and show the implementation of many data str
 
 Author: Jose Daniel Oropeza Soria.
 
+LinkedIn: www.linkedin.com/in/dani-oropeza
 Email: danioropezasoria@gmail.com
