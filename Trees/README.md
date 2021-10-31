@@ -10,7 +10,7 @@ A tree must be:
 - Connected: a tree is a connected graph in which all its vertices are connected by a path.
 - Acyclic: a tree is a acyclic graph when it does not contain cycles.
 
-<img src="../images/they_are_not_trees.jpg" width="50%" />
+<img src="../images/they_are_not_trees.jpg" width="65%" />
 
 ## Terminology
 - Leaf Node: node with no children.
