@@ -20,7 +20,7 @@ template<typename T, int TAM>
 void Hash<T, TAM>::Insert(T element) {
 	int index = GetHashValue(element);
 	if (hash[index] == NULL) {
-		hash[index] = new List8<T>();
+		hash[index] = new LinkedList<T>();
 	}
 	hash[index]->AddBack(element);
 }

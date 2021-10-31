@@ -1,20 +1,20 @@
-#include "List8.h"
+#include "LinkedList.h"
 
 template<typename T>
-List8<T>::List8() {
+LinkedList<T>::LinkedList() {
 	first_ = NULL;
 	last_ = NULL;
 }
 template<typename T>
-Triple<T>* List8<T>::first() {
+Triple<T>* LinkedList<T>::first() {
 	return first_;
 }
 template<typename T>
-Triple<T>* List8<T>::last() {
+Triple<T>* LinkedList<T>::last() {
 	return last_;
 }
 template<typename T>
-void List8<T>::AddFront(T element) {
+void LinkedList<T>::AddFront(T element) {
 	Triple<T>* aux;
 	if (first_ == NULL) {
 		first_ = last_ = new Triple<T>(element);
@@ -27,7 +27,7 @@ void List8<T>::AddFront(T element) {
 	}
 }
 template<typename T>
-void List8<T>::DeleteFront() {
+void LinkedList<T>::DeleteFront() {
 	Triple<T>* aux;
 	if (first_ != NULL) {
 		if (first_ == last_) {
@@ -44,7 +44,7 @@ void List8<T>::DeleteFront() {
 	}
 }
 template<typename T>
-void List8<T>::AddBack(T element) {
+void LinkedList<T>::AddBack(T element) {
 	Triple<T>* aux;
 	if (last_ == NULL) {
 		first_ = last_ = new Triple<T>(element);
@@ -56,7 +56,7 @@ void List8<T>::AddBack(T element) {
 	}
 }
 template<typename T>
-void List8<T>::DeleteBack() {
+void LinkedList<T>::DeleteBack() {
 	Triple<T>* aux;
 	if (last_ != NULL) {
 		if (first_ == last_) {
@@ -71,7 +71,7 @@ void List8<T>::DeleteBack() {
 	}
 }
 template<typename T>
-void List8<T>::Delete(T element) {
+void LinkedList<T>::Delete(T element) {
 	Triple<T>* to_be_deleted = Search(element);
 	if ((to_be_deleted->previous() == NULL) && (to_be_deleted->next() != NULL)) {
 		to_be_deleted->next()->set_previous(NULL);
@@ -86,7 +86,7 @@ void List8<T>::Delete(T element) {
 	delete to_be_deleted;
 }
 template<typename T>
-Triple<T>* List8<T>::Search(T element) {
+Triple<T>* LinkedList<T>::Search(T element) {
 	Triple<T>* iterator = first_;
 	while (iterator != NULL) {
 		if (element == iterator->element()) {
@@ -97,7 +97,7 @@ Triple<T>* List8<T>::Search(T element) {
 	return NULL;
 }
 template<typename T>
-Triple<T>* List8<T>::SearchRecursiveImpl(T element, Triple<T>* iterator) {
+Triple<T>* LinkedList<T>::SearchRecursiveImpl(T element, Triple<T>* iterator) {
 	if (iterator == NULL) {
 		return NULL;
 	}
@@ -108,11 +108,11 @@ Triple<T>* List8<T>::SearchRecursiveImpl(T element, Triple<T>* iterator) {
 	}
 }
 template<typename T>
-Triple<T>* List8<T>::SearchRecursive(T element) {
+Triple<T>* LinkedList<T>::SearchRecursive(T element) {
 	return SearchRecursiveImpl(element, first_);
 }
 template<typename T>
-Triple<T>* List8<T>::SearchTheMinor() {
+Triple<T>* LinkedList<T>::SearchTheMinor() {
 	Triple<T>* iterator = first_;
 	Triple<T>* minor = first_;
 	while (iterator != NULL) {
@@ -124,7 +124,7 @@ Triple<T>* List8<T>::SearchTheMinor() {
 	return minor;
 }
 template<typename T>
-Triple<T>* List8<T>::Nth(int position) {
+Triple<T>* LinkedList<T>::Nth(int position) {
 	if (position < 0) {
 		return NULL;
 	}
@@ -137,7 +137,7 @@ Triple<T>* List8<T>::Nth(int position) {
 	return iterator;
 }
 template<typename T>
-void List8<T>::Show() {
+void LinkedList<T>::Show() {
 	Triple<T>* iterator = first_;
 	while (iterator != NULL) {
 		iterator->Show();
