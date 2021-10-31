@@ -50,7 +50,6 @@ void Heap<T, TAM>::RecoverDownUp(int leaf) {
 		{
 			theMayor = leaf * 2 + 1;
 		}
-		cout << "Mira aqui" << endl;
 		cout << heap_[leaf]->element() << endl;
 		cout << heap_[theMayor]->element() << endl;
 		if (heap_[leaf]->element() < heap_[theMayor]->element()) {

@@ -1,4 +1,4 @@
-# Linked List
+# Heap
 ## What is a Heap?
 
 <img src="../images/linked_lists_variants.jpg" width="75%" />
@@ -9,7 +9,7 @@
 ## Disadvantages
 
 
-## Linked Lists operations and Time Complexity
+## Heap operations and Time Complexity
 | Operation    | Time Complexity |
 | ------------ | --------------- |
 | Insert       | O()            |
