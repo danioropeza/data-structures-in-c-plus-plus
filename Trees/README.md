@@ -3,7 +3,7 @@
 
 A tree is a hierarchical structure that starts with a node called Root. With this root and subtrees of children with a parent node, represented as a set of linked nodes. A tree data structure can be defined recursively as a collection of nodes, where each node is a data structure consisting of a value and a list of references to nodes. The start of the tree is the "root node" and the reference nodes are the "children". No reference is duplicated and none points to the root.
 
-<img src="../images/tree_and_its_terminology.jpg" width="50%" />
+<img src="../images/tree_and_its_terminology.jpg" width="80%" />
 
 ### Terminology
 - Leaf Node: node with no children.
