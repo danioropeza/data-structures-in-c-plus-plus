@@ -5,12 +5,12 @@ A tree is a hierarchical structure that starts with a node called Root. With thi
 
 <img src="../images/simple_tree_example.jpg" width="75%" />
 
+A tree must be:
+- Undirected: a tree is an undirected graph in which any two vertices are connected by exactly one path.
+- Connected: a tree is a connected graph in which all its vertices are connected by a path.
+- Acyclic: a tree is a acyclic graph when it does not contain cycles.
 
-
-It is an undirected, connected and acyclic graph. A graph is a set of vertices and edges.
-<img src="../images/linked_lists_variants.jpg" width="75%" />
-
-## Arbol K-ario
+<img src="../images/they_are_not_trees.jpg" width="75%" />
 
 ## Terminology
 - Leaf Node: node with no children.
@@ -19,10 +19,6 @@ It is an undirected, connected and acyclic graph. A graph is a set of vertices a
 - Height: length of the largest Branch.
 - Root: Ancestor of all the tree's nodes.
 - Ancestor: If the path from N to the Root passes through M, then M is Ancestor of N.
-
-<img src="../images/linked_lists_variants.jpg" width="75%" />
-
-## Code explanation
 
 ## TODO
 - 
