@@ -1,4 +1,4 @@
-# Data Estructures and Algorithms
+# Data Structures and Algorithms
 This repository pretends to explain and show the implementation of many data structures and algorithms in C++.
 
 Author: Jose Daniel Oropeza Soria.
