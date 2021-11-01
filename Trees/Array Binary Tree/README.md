@@ -9,13 +9,13 @@ There are many ways to implement binary trees in the code, one of them is by usi
 - Ancestor = index/2
 - Number of nodes = (2^N)-1
 
-These formulas just work if we start in index 1 of the array.
+These formulas just work if we start at index 1 of the array.
 
 <img src="../../images/array_binary_tree_example.jpg" width="80%" />
 
 Each is node is stored in a specific position of the array. Basically, this is an Array of Nodes. The implementation using Array is not good for deletion due to the nature of the Arrays, which makes it difficult to maintain the structure with this action.
 
-## Linked Lists operations and Time Complexity
+## Binary Trees operations and Time Complexity
 | Operation        | Time Complexity |
 | ---------------- | --------------- |
 | Insert           | O(n)            |
@@ -29,9 +29,10 @@ Each is node is stored in a specific position of the array. Basically, this is a
 
 Binary Tree is unordered hence slower in process of insertion, deletion, and searching. Also, in a Binary Tree, there is no ordering in terms of how the nodes are arranged. You'll see how these time complexities enhance with the different kinds of Binary Trees.
 
+## Tree Transversals
+<img src="../../images/tree_transversals_example.jpg" width="80%" />
+
 ## Code explanation
 
 ## TODO
 - Explain the relation with the code.
-- Explain all the shows.
-- Time complexity of all the functions.
